@@ -1,0 +1,27 @@
+# port 9090
+server:
+  port: 9090
+
+# Mysql admin password url
+spring:
+   datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2b8
+      username: root
+      password: root
+
+# Invalid bound statement (not found): com.boot.javactrl.mapper.UserMapper.update 500 Error
+# 你自己创建的 mapper
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+#  configuration:                           # 输出日志 StdOutimpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+## upload path
+files:
+  upload:
+    path: E:/WorkSpace Program/SpringBoot/files/
